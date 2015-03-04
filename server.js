@@ -24,5 +24,8 @@ app.get('/home', function(req, res){
 app.get('/about', function(req, res){
 	res.render('about');
 });
+app.get('/developers', function(req, res){
+	res.render('developers');
+});
 
 console.log('Server started on localhost');
