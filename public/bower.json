@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "homepage": "https://github.com/Coco1382/claseSass",
   "authors": [
-    "Estudiante"
+    "Diego Vera <diego.vera@prodigious.cr>"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
 }
