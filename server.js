@@ -2,6 +2,7 @@ var express = require('express');
 
 var app = express();
 var appFortune = require("./lib/fortune");
+var appInventory = require("./lib/inventory");
 
 // set up handlebars view engine
 var handlebars = require('express3-handlebars')
@@ -15,15 +16,23 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', function(req, res) {
-	res.render('home');
+	res.render('home', {title: 'home'});
 });
 app.get('/home', function(req, res) {
-	
-	
-	res.render('home', {fortune: appFortune.getFortune()});
+	res.render('home', {
+		fortune: appFortune.getFortune(),
+		title: 'home'
+	});
 });
 app.get('/about', function(req,res){
-	res.render('about');
+	res.render('about', {title:'About'});
+});
+
+app.get('/inventory', function(req,res){
+	res.render('inventory', {
+		title:'inventory',
+		inventoryController: 'inventoryController'
+	});
 });
 
 // 404 catch-all handler (middleware)
