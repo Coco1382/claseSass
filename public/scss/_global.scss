@@ -3,7 +3,9 @@ body {
 }
 
 .wrapper {
-	margin: 0 auto;
+	margin: 15px auto 0px auto;
+	overflow: hidden;
+	padding: 0px 15px;
 	width: 100%;
 
 	@include respond-to($screen-sm-min){

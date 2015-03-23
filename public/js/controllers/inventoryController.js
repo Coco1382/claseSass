@@ -1,7 +1,10 @@
 APP.controller('inventoryController', function($scope, $firebaseArray) {
 
-	var ref = new Firebase("https://mystuffproject.firebaseio.com/dinamovera");
+	$scope.$watch("user", function(){
 
-	$scope.inventory = $firebaseArray(ref);
+        var ref = new Firebase("https://mystuffproject.firebaseio.com/"+$scope.user);
+
+		$scope.inventory = $firebaseArray(ref);
+    });
 	
 });
