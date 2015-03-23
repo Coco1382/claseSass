@@ -1,3 +1,5 @@
+global.__base = __dirname + '/';
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var handlebars = require('express3-handlebars');
@@ -12,7 +14,7 @@ var auth = require("./lib/auth");
 //My credentials
 var credentials = require("./credentials");
 
-//APP
+//APPs
 var app = express();
 
 //--------------VENDOR MODULES CONFIG-------------//
@@ -46,7 +48,7 @@ app.use(session({
 // index page
 app.get('/', function(req, res) {
 	//console.log('home page');
-	res.render('home');
+	res.render('home', exportModules.config('home', req.session.userName));
 });
 
 // home page
@@ -70,7 +72,7 @@ app.get('/logme', function(req,res){
 //logout page
 app.get('/logout', function(req,res){
 	req.session.destroy(function(err) {
-  		res.render('home');
+  		res.render('home', exportModules.config('home', req.session.userName));
 	});
 });
 

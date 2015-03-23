@@ -7138,12 +7138,74 @@ button.close {
     display: none !important;
   }
 }
-.home-page {
-  background-color: red;
+body {
+  background-image: url("../images/bg.png");
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+@media all and (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media all and (min-width: 992px) {
+  .wrapper {
+    max-width: 992px;
+  }
+}
+@media all and (min-width: 1180px) {
+  .wrapper {
+    max-width: 1180px;
+  }
 }
 
 .about-page {
   background-color: blue;
+}
+
+.inventory {
+  margin: 20px 0px;
+}
+.inventory .table-data {
+  margin: 15px 0px 0px 0px;
+  width: 100%;
+}
+.inventory .table-data__tbody {
+  margin-top: 10px;
+}
+.inventory .table-data__td {
+  padding: 5px 0px;
+}
+.inventory .table-data__th {
+  padding: 10px 0px;
+}
+.inventory .search-panel {
+  padding: 10px 0px;
+  border-bottom: 1px solid #888;
+}
+
+.user-panel {
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  overflow: auto;
+}
+.user-panel .actions-list {
+  list-style-type: none;
+  margin: 10px;
+  overflow: auto;
+  float: right;
+}
+.user-panel .actions-list__item {
+  border-right: 1px solid #fff;
+  float: left;
+  padding: 5px 10px;
+}
+.user-panel .actions-list__item:last-child {
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */

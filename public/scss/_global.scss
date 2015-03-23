@@ -1,0 +1,20 @@
+body {
+	background-image: url('../images/bg.png');
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+
+	@include respond-to($screen-sm-min){
+		max-width: $screen-sm-min;
+	}
+
+	@include respond-to($screen-md-min){
+		max-width: $screen-md-min;
+	}
+
+	@include respond-to($screen-lg-min){
+		max-width: $screen-lg-min;
+	}
+}
