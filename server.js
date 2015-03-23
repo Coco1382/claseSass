@@ -3,7 +3,7 @@ global.__base = __dirname + '/';
 var express = require('express');
 var bodyParser = require('body-parser');
 var handlebars = require('express3-handlebars');
-var session = require('express-session')
+var session = require('express-session');
 
 //My modules
 var exportModules = require("./lib/exportModules");
@@ -72,7 +72,7 @@ app.get('/logme', function(req,res){
 //logout page
 app.get('/logout', function(req,res){
 	req.session.destroy(function(err) {
-  		res.render('home', exportModules.config('home', req.session.userName));
+  		res.render('home', exportModules.config('home'));
 	});
 });
 
