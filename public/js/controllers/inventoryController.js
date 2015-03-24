@@ -1,10 +1,18 @@
 APP.controller('inventoryController', function($scope, $firebaseArray) {
 
-	$scope.$watch("user", function(){
+	$scope.$watchGroup(['user', 'secret'], function(){
 
-        var ref = new Firebase("https://mystuffproject.firebaseio.com/"+$scope.user);
+    	var ref = new Firebase("https://mystuffproject.firebaseio.com/"+$scope.user);
 
-		$scope.inventory = $firebaseArray(ref);
-    });
-	
+        ref.authWithCustomToken($scope.secret, function(error, authData) {
+			if (error) {
+		    	console.log("Login Failed!", error);
+		  	} else {
+		    	$scope.inventory = $firebaseArray(ref);
+			}
+		});
+
+   	});
+
+
 });
