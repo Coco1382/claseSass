@@ -1,4 +1,4 @@
-var APP = angular.module('APP', []);
+var APP = angular.module('APP', ['firebase']);
 
 APP.config(function ($interpolateProvider) {
     $interpolateProvider.startSymbol('<[');
