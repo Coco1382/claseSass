@@ -63,6 +63,10 @@ app.get('/about', function(req,res){
 	res.render('about');
 });
 
+app.get('/iconLibrary', function(req,res){
+	res.render('iconLibrary');
+});
+
 //logme page
 app.get('/logme', function(req,res){
 	//console.log('logme page');

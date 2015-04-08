@@ -4,11 +4,13 @@
 @import "vars";
 @import "mixins";
 @import "global";
+@import "iconfonts";
 
 //Pages
 @import "./pages/home";
 @import "./pages/about";
 @import "./pages/inventory";
+@import "./pages/iconLibrary";
 
 //Partials
 @import "./partials/user-panel";
