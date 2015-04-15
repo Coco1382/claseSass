@@ -1,4 +1,4 @@
 module.exports = {
 	cookieSecret: 'Ucr3@t1v@',
-	tokenSecret: '1olttVRRuqKbVsKLBGW0lIxKeewPnIlkVD50FA5x'
+	tokenSecret: 'lsM0qCJn3YKGw893acn3Wa7TsStKioORelB1cv2h'
 };
