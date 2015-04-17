@@ -28,22 +28,32 @@
 								<!--<[x.quantity]>-->
 							<!--</td>-->
 						<!--</tr>-->
-
-					<tbody class="table-data__tbody">
-						<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
-							<td>
-								<[x.img]>
-							</td>
-							<th class="table-data__th">
-								<[x.title]>
-							</th>
-						</tr>
-						<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
-							<td class="table-data__td">
+					<div>
+						<tbody class="table-data__tbody">
+							<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
+								<td>
+									<[x.img]>
+								</td>
+								<th class="table-data__th">
+									<[x.title]>
+								</th>
+								<td>
+									<input type='button' value='Edit'/>
+								</td>
+								<td>
+									<input type='button' value='Delete'/>
+								</td>
+								<td>
+									<input type='button' value='New'/>
+								</td>
+							</tr>
+						</tbody>
+						<div class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
+							<div class="table-data__td">
 								<[x.newsBody]>
-							</td>
-						</tr>
-					</tbody>
+							</div>
+						</div>
+                    </div>
 				</table>
             </div>
 		</div>
