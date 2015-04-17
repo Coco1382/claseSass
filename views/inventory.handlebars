@@ -6,27 +6,46 @@
 			<label for="search">Search:</label>
 			<input type="text" ng-model="test" name="search">
 		</div>	
-		<table class="table-data">
-			<thead class="table-data__thead">
-				<tr class="table-data__tr table-data__tr--head">
-					<th class="table-data__th">Name</th>
-					<th class="table-data__th">Brand</th>
-					<th class="table-data__th">Quantity</th>
-				</tr>
-			</thead>
-			<tbody class="table-data__tbody">
-				<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
-					<td class="table-data__td">
-						<[x.item]>
-					</td>
-					<td class="table-data__td">
-						<[x.brand]>
-					</td>
-					<td class="table-data__td">
-						<[x.quantity]>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class="row"> <!--LA AGREGUE YO*******-->
+			<div class="col-xs-1 col-sm-6 col-md-3"> <!--LA AGREGUE YO*******-->
+				<table class="table-data">
+					<!--<thead class="table-data__thead">-->
+						<!--<tr class="table-data__tr table-data__tr--head">-->
+							<!--<th class="table-data__th">Name</th>-->
+							<!--<th class="table-data__th">Brand</th>-->
+							<!--<th class="table-data__th">Quantity</th>-->
+						<!--</tr>-->
+					<!--</thead>-->
+					<!--<tbody class="table-data__tbody">-->
+						<!--<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">-->
+							<!--<td class="table-data__td">-->
+								<!--<[x.item]>-->
+							<!--</td>-->
+							<!--<td class="table-data__td">-->
+								<!--<[x.brand]>-->
+							<!--</td>-->
+							<!--<td class="table-data__td">-->
+								<!--<[x.quantity]>-->
+							<!--</td>-->
+						<!--</tr>-->
+
+					<tbody class="table-data__tbody">
+						<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
+							<td>
+								<[x.img]>
+							</td>
+							<th class="table-data__th">
+								<[x.title]>
+							</th>
+						</tr>
+						<tr class="table-data__tr" ng-repeat="x in inventory | filter:test | orderBy:'item'">
+							<td class="table-data__td">
+								<[x.newsBody]>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+            </div>
+		</div>
 	</div>
 </div>
