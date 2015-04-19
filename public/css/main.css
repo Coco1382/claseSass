@@ -7236,7 +7236,6 @@ body {
 }
 .posts .post article .articleBody {
   margin: 20px 20px;
-  min-height: 200px;
 }
 .posts .post article .postAdminBtns {
   display: block;
