@@ -85,6 +85,16 @@ app.get('/inventory', function(req,res){
 	res.render('inventory', exportModules.config('inventory', req.session.userName));
 });
 
+app.get('/add', function(req,res){
+	res.render('addInventory', exportModules.config('addInventory', req.session.userName));
+});
+
+app.get('/addResult', function(req,res){
+	res.render('addInventory', exportModules.config('addInventory', req.session.userName));
+});
+
+
+
 //-------------------POST EVENTS-----------------------//
 
 app.post('/process', function(req,res){

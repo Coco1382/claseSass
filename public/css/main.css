@@ -7175,6 +7175,13 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?pbgnmn");
+  src: url("../fonts/icomoon.eot?#iefixpbgnmn") format("embedded-opentype"), url("../fonts/icomoon.woff?pbgnmn") format("woff"), url("../fonts/icomoon.ttf?pbgnmn") format("truetype"), url("../fonts/icomoon.svg?pbgnmn#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 .font-icon {
   font-family: 'c-font';
   speak: none;
@@ -7203,6 +7210,9 @@ body {
 .inventory {
   margin: 20px 0px;
 }
+.inventory .wrapper {
+  position: relative;
+}
 .inventory .table-data {
   margin: 15px 0px 0px 0px;
   width: 100%;
@@ -7216,9 +7226,58 @@ body {
 .inventory .table-data__th {
   padding: 10px 0px;
 }
+.inventory .table-data__icons {
+  display: inline-block;
+}
+.inventory .table-data__icons div {
+  cursor: pointer;
+  opacity: 0.2;
+  margin: 0.5em;
+}
+.inventory .table-data__icons div:hover {
+  opacity: 1;
+}
+.inventory .table-data__edit-icon {
+  color: green;
+  float: left;
+}
+.inventory .table-data__edit-icon:after {
+  font-family: 'icomoon';
+  content: "\e906";
+}
+.inventory .table-data__delete-icon {
+  float: right;
+  color: red;
+}
+.inventory .table-data__delete-icon:after {
+  font-family: 'icomoon';
+  content: "\ea0d";
+}
 .inventory .search-panel {
   padding: 10px 0px;
   border-bottom: 1px solid #888;
+}
+.inventory .add-btn {
+  position: absolute;
+  right: 1em;
+  top: 0.3em;
+}
+
+.add-inventory .add-form {
+  margin: 15px 0px 0px 0px;
+  width: 100%;
+}
+.add-inventory .add-form__tbody {
+  margin-top: 3em;
+}
+.add-inventory .add-form__th {
+  border-bottom: 1px solid #888;
+  text-align: center;
+  font-size: 22px;
+}
+.add-inventory .add-form__td input {
+  width: 100%;
+  margin: 1em 0;
 }
 
 .icon-library__wrapper {

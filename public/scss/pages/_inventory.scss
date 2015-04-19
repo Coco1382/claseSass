@@ -1,6 +1,9 @@
 .inventory {
 	margin: 20px 0px;
 
+	.wrapper{
+		position: relative;
+	}
 	.table-data {
 		margin: 15px 0px 0px 0px; 
 		width: 100%;
@@ -16,11 +19,44 @@
 		&__th {
 			padding: 10px 0px;
 		}
+		&__icons{
+			display: inline-block;
+		}
+		&__icons div{
+			cursor: pointer;
+			opacity: 0.2;
+			margin: 0.5em;
+			&:hover{
+				opacity: 1;
+			}
+		}
+		&__edit-icon{
+			color: green;
+			float: left;
+			&:after{
+				font-family: 'icomoon';
+				content: "\e906";
+			}
+		}
+			
+		&__delete-icon{
+			float: right;
+			color: red;
+			&:after{
+				font-family: 'icomoon';
+				content: "\ea0d";
+			}
+		}
 
 	}
 
 	.search-panel {
 		padding: 10px 0px;
 		border-bottom: 1px solid #888;
+	}
+	.add-btn{
+		position: absolute;
+		right: 1em;
+		top: 0.3em;
 	}
 }

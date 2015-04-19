@@ -1,0 +1,23 @@
+.add-inventory{
+
+	.add-form{
+		margin: 15px 0px 0px 0px; 
+		width: 100%;
+
+		&__tbody{
+			margin-top: 3em;
+		}
+
+		&__th{
+			border-bottom: 1px solid #888;
+			text-align: center;
+			font-size: 22px;
+		}
+		&__td{
+			input{
+				width: 100%;
+				margin: 1em 0;
+			}
+		}
+	}
+}

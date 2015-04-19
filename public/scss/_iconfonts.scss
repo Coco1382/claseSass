@@ -8,6 +8,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?pbgnmn');
+    src:url('../fonts/icomoon.eot?#iefixpbgnmn') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?pbgnmn') format('woff'),
+        url('../fonts/icomoon.ttf?pbgnmn') format('truetype'),
+        url('../fonts/icomoon.svg?pbgnmn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .font-icon {
     font-family: 'c-font';
