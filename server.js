@@ -86,11 +86,7 @@ app.get('/inventory', function(req,res){
 });
 
 app.get('/add', function(req,res){
-	res.render('addInventory', exportModules.config('addInventory', req.session.userName));
-});
-
-app.get('/addResult', function(req,res){
-	res.render('addInventory', exportModules.config('addInventory', req.session.userName));
+	res.render('add', exportModules.config('add', req.session.userName));
 });
 
 
