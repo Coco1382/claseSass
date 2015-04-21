@@ -1,0 +1,10 @@
+
+<div ng-app="sampleApp" ng-controller="postController" ng-init="user='{{user.name}}'; secret='{{user.secret}}'">
+  <ul class="chatbox">
+    <li ng-repeat="message in messages">{{ message.from }}: {{ message.content }}</li>
+  </ul>
+  <form ng-submit="addMessage()">
+    <input ng-model="message" type="text">
+    <input value="Add Post" type="submit">
+  </form>
+</div>
