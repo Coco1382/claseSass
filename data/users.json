@@ -1,12 +1,12 @@
 [
     {
-        "name": "admin",
-        "nickname": "admin",
-        "password": "admin"
+        "name": "george",
+        "nickname": "george",
+        "password": "marvel"
     },
     {
-        "name": "Diego Vera",
-        "nickname": "dinamovera",
+        "name": "admin",
+        "nickname": "admin",
         "password": "1234"
     }
 ]
