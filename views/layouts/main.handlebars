@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>title</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+<html ng-app="APP">
+	<head>
+		<title>{{title}}</title>
+	    {{> heads-import}}
+	</head>
+	<body>
+	{{> user-panel }}
 
-</head>
-<body>
+	{{!-- handlebar comment--}}
 
-{{!-- handlebar comment--}}
+	{{{body}}}
 
-
-{{{body}}}
-
-{{> footer}}
-
-</body>
+	</body>
 </html>
