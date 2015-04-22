@@ -9,9 +9,14 @@ APP.controller('inventoryController', function($scope, $firebaseArray) {
 		    	console.log("Login Failed!", error);
 		  	} else {
 		    	$scope.inventory = $firebaseArray(ref);
+
 		    	console.log($scope.inventory);
 			}
 		});
+
+		$scope.remove = function(id){
+			console.log(id);
+		};
 
    	});
 });
