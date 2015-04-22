@@ -1,0 +1,62 @@
+<div class="posts" ng-controller="postsController" ng-init="user='{{user.name}}'; secret='{{user.secret}}'">
+
+	<div class="wrapper">
+		<div class="search-panel">
+			<label for="search">Search:</label>
+			<input type="text" ng-model="test" name="search">
+		</div>
+
+		<div class="createPost">
+			<h1>Add a new post</h1>
+
+				<form ng-submit="createItem()">
+					<label for="postTitle">Title</label>
+					<input type="text" id="postTitle" ng-model="postTitle"/>
+
+					<label for="postDescription">Description</label>
+					<input type="text" id="postDescription" ng-model="postDescription"/>
+
+					<label for="postImage">Image name</label>
+					<input type="text" id="postImage"  ng-model="postImage"/>
+					<input type="submit" id="submit" value="Create" />
+				</form>
+		</div>
+
+		<div class="editPost" ng-show="showEditForm">
+			<h1>Edit a post</h1>
+
+			<form ng-submit="saveItem(postIndex)">
+				<input type="hidden" name="index" ng-model="postIndex"/>
+				<label for="postTitle2">Title</label>
+				<input type="text" id="postTitle2" ng-model="postTitle2"/>
+
+				<label for="postDescription2">Description</label>
+				<input type="text" id="postDescription2" ng-model="postDescription2"/>
+
+				<label for="postImage2">Image name</label>
+				<input type="text" id="postImage2"  ng-model="postImage2"/>
+				<input type="submit" id="save" value="Save" />
+				<input type="button" id="cancel" value="Cancel" />
+			</form>
+		</div>
+
+		<div class="columns">
+			<div class="post " ng-repeat="article in posts | filter:test | orderBy:'item'">
+				<article >
+					<div class="clearfix" >
+					  	<div class="image-container"><img ng-src="<[article.img]>" alt=""/></div>
+						<h2><[article.title]></h2>
+					</div>
+					<div>
+						<p class="articleBody"><[article.newsBody]></p>
+					</div>
+					<a href="#" class="editArticle postAdminBtns" ng-click="editItem($index)">E</a>
+					<a href="#" class="removeArticle postAdminBtns" ng-click="removeItem($index)">X</a>
+				</article>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- col-xs-12 col-sm-6 col-md-4 -->

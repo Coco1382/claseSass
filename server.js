@@ -80,9 +80,9 @@ app.get('/logout', function(req,res){
 	});
 });
 
-//inventory page
-app.get('/inventory', function(req,res){
-	res.render('inventory', exportModules.config('inventory', req.session.userName));
+//posts page
+app.get('/posts', function(req,res){
+	res.render('posts', exportModules.config('posts', req.session.userName));
 });
 
 //-------------------POST EVENTS-----------------------//

@@ -7200,25 +7200,69 @@ body {
   background-color: blue;
 }
 
-.inventory {
+.posts {
   margin: 20px 0px;
 }
-.inventory .table-data {
-  margin: 15px 0px 0px 0px;
-  width: 100%;
-}
-.inventory .table-data__tbody {
-  margin-top: 10px;
-}
-.inventory .table-data__td {
-  padding: 5px 0px;
-}
-.inventory .table-data__th {
-  padding: 10px 0px;
-}
-.inventory .search-panel {
+.posts .search-panel {
+  margin-bottom: 20px;
   padding: 10px 0px;
   border-bottom: 1px solid #888;
+}
+.posts .columns {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 2%;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 2%;
+  -moz-column-fill: auto;
+  column-count: 3;
+  column-gap: 2%;
+  column-fill: auto;
+}
+.posts .post {
+  padding: 0 1%;
+  margin-bottom: 6%;
+  width: 100%;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+}
+.posts .post article {
+  background-color: #d8d8dc;
+  padding: 3%;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+.posts .post article .articleBody {
+  margin: 20px 20px;
+}
+.posts .post article .postAdminBtns {
+  display: block;
+  position: absolute;
+}
+.posts .post article .removeArticle {
+  top: 40px;
+  right: -4px;
+}
+.posts .post article .editArticle {
+  top: 15px;
+  right: -4px;
+}
+.posts .post article .image-container, .posts .post article h2 {
+  float: left;
+}
+.posts .post article .image-container {
+  width: 35%;
+}
+.posts .post article .image-container img {
+  max-width: 100%;
+}
+.posts .post article h2 {
+  font-size: 20px;
+  font-family: "Helvetica Neue Bold", "HelveticaNeue-Bold", "Helvetica Neue", Calibri, Helvetica, Arial;
+  padding: 2px 20px 0 20px;
+  width: 65%;
 }
 
 .icon-library__wrapper {
