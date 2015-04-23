@@ -7196,6 +7196,18 @@ body {
   content: "\e601";
 }
 
+.footerBg {
+  height: 50px;
+  background-color: #333333;
+  text-align: center;
+  margin-top: 15px;
+}
+.footerBg p {
+  color: white;
+  font-weight: bolder;
+  padding-top: 15px;
+}
+
 .about-page {
   background-color: blue;
 }
@@ -7207,6 +7219,9 @@ body {
   margin-bottom: 20px;
   padding: 10px 0px;
   border-bottom: 1px solid #888;
+}
+.posts .createPost {
+  margin-bottom: 15px;
 }
 .posts .columns {
   -webkit-column-count: 3;
@@ -7260,6 +7275,7 @@ body {
 }
 .posts .post article h2 {
   font-size: 20px;
+  font-weight: bold;
   font-family: "Helvetica Neue Bold", "HelveticaNeue-Bold", "Helvetica Neue", Calibri, Helvetica, Arial;
   padding: 2px 20px 0 20px;
   width: 65%;
@@ -7286,6 +7302,10 @@ body {
 }
 .icon-library__list__item {
   color: blue;
+}
+
+.formBottomMargin {
+  margin-bottom: 15px;
 }
 
 .user-panel {

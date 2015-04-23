@@ -62,13 +62,7 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 					$scope.showEditForm = false;
 
 					//$scope.postTitle2 = "funcionando el save";
-
-
 				}
-
-
-
-
 			}
 		});
 

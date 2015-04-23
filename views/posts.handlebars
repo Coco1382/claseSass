@@ -1,7 +1,8 @@
 <div class="posts" ng-controller="postsController" ng-init="user='{{user.name}}'; secret='{{user.secret}}'">
 
 	<div class="wrapper">
-		<div class="search-panel">
+        <div><img src="/images/cr7-2.jpg" alt="CR7 Image"/></div>
+        <div class="search-panel">
 			<label for="search">Search:</label>
 			<input type="text" ng-model="test" name="search">
 		</div>
@@ -16,7 +17,7 @@
 					<label for="postDescription">Description</label>
 					<input type="text" id="postDescription" ng-model="postDescription"/>
 
-					<label for="postImage">Image name</label>
+					<label for="postImage">Image Path</label>
 					<input type="text" id="postImage"  ng-model="postImage"/>
 					<input type="submit" id="submit" value="Create" />
 				</form>
@@ -35,8 +36,9 @@
 
 				<label for="postImage2">Image name</label>
 				<input type="text" id="postImage2"  ng-model="postImage2"/>
+
 				<input type="submit" id="save" value="Save" />
-				<input type="button" id="cancel" value="Cancel" />
+				<input type="button" id="cancel" value="Cancel" onclick="javascript:window.location='http://localhost:3000/posts';" />
 			</form>
 		</div>
 
@@ -50,7 +52,9 @@
 					<div>
 						<p class="articleBody"><[article.newsBody]></p>
 					</div>
-					<a href="#" class="editArticle postAdminBtns" ng-click="editItem($index)">E</a>
+					<a href="#" class="editArticle postAdminBtns" ng-click="editItem($index)">E
+                        <!--<span class="glyphicon glyphicon-star" aria-hidden="true"></span>-->
+					</a>
 					<a href="#" class="removeArticle postAdminBtns" ng-click="removeItem($index)">X</a>
 				</article>
 			</div>

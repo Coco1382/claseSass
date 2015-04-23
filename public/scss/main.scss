@@ -5,12 +5,14 @@
 @import "mixins";
 @import "global";
 @import "iconfonts";
+@import "footer";
 
 //Pages
 @import "./pages/home";
 @import "./pages/about";
 @import "pages/posts";
 @import "./pages/iconLibrary";
+@import "./pages/logme";
 
 //Partials
 @import "./partials/user-panel";
