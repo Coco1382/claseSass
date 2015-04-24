@@ -5,21 +5,32 @@
       margin-bottom: 20px;
       padding: 10px 0px;
       border-bottom: 1px solid #888;
-  }
 
-  .createPost {
-    margin-bottom: 15px;
+    .searchPost {
+      padding: 0 2%;
+      height: 26px;
+      line-height: 100%;
+      font-size: 1em;
+      float: left;
+    }
+
+    .createPostBtn {
+      float: right;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 8px;
+    }
   }
 
   .columns {
-    -webkit-column-count: 3;
-    -webkit-column-gap: 2%;
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0;
     -webkit-column-fill: auto;
-    -moz-column-count: 3;
-    -moz-column-gap: 2%;
+    -moz-column-count: 1;
+    -moz-column-gap: 0;
     -moz-column-fill: auto;
-    column-count: 3;
-    column-gap: 2%;
+    column-count: 1;
+    column-gap: 0;
     column-fill: auto;
   }
 
@@ -30,6 +41,7 @@
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     column-break-inside: avoid;
+    z-index: 1;
 
     article {
       background-color: #d8d8dc;
@@ -45,15 +57,30 @@
       .postAdminBtns {
         display: block;
         position: absolute;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        line-height: 25px;
 
       }
+
       .removeArticle {
-        top: 40px;
-        right: -4px;
+        top: 8px;
+        right: 6px;
+        color: #FFFFFF;
+        background-color: red;
+        padding-left: 5px;
+        line-height: 27px;
       }
+
       .editArticle {
-        top: 15px;
-        right: -4px;
+        top: 8px;
+        right: 35px;
+        color: #FFFFFF;
+        background-color: #0b97c4;
+        display: block;
+        padding-left: 6px;
+        z-index: 2;
       }
 
       .image-container, h2 {
@@ -61,7 +88,7 @@
       }
 
       .image-container {
-        width: 35%;
+        width: 20%;
 
         img {
           max-width: 100%;
@@ -73,8 +100,106 @@
         font-weight: bold;
         font-family: "Helvetica Neue Bold", "HelveticaNeue-Bold", "Helvetica Neue", Calibri, Helvetica, Arial;
         padding: 2px 20px 0 20px;
-        width: 65%;
+        width: 80%;
       }
+    }
+  }
+  
+  .modalPost {
+    .postTitle {
+      width: 100%;
+      height: 35px;
+      line-height: 100%;
+      font-size: 20px;
+      padding: 0 3%;
+      margin-bottom: 8px;
+    }
+    
+    .postDescription {
+      width: 100%;
+      padding: 2% 3%;
+      resize: none;
+      height: 300px;
+      margin-bottom: 3px;
+      border-color: #CCCCCC;
+    }
+
+    .postImage {
+      margin-bottom: 8px;
+      padding: 0 3%;
+    }
+
+    .searchImage {
+      div, input {
+        float: left;
+        width: 50%;
+      }
+
+      .imageBox {
+        div {
+          height: 114px;
+          width: 114px;
+          margin: auto;
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .posts {
+    .post {
+      article {
+        .image-container {
+          width: 20%;
+        }
+
+        h2 {
+          width: 80%;
+        }
+
+      }
+    }
+
+    .columns {
+      -webkit-column-count: 2;
+      -webkit-column-gap: 2%;
+      -webkit-column-fill: auto;
+      -moz-column-count: 2;
+      -moz-column-gap: 2%;
+      -moz-column-fill: auto;
+      column-count: 2;
+      column-gap: 2%;
+      column-fill: auto;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .posts {
+    .post {
+      article {
+        .image-container {
+          width: 35%;
+        }
+
+        h2 {
+          width: 65%;
+        }
+      }
+    }
+
+    .columns {
+      -webkit-column-count: 3;
+      -webkit-column-gap: 2%;
+      -webkit-column-fill: auto;
+      -moz-column-count: 3;
+      -moz-column-gap: 2%;
+      -moz-column-fill: auto;
+      column-count: 3;
+      column-gap: 2%;
+      column-fill: auto;
     }
   }
 }

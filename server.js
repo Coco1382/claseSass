@@ -94,7 +94,7 @@ app.post('/process', function(req,res){
 
 		if(registeredUser){
 		    req.session.userName = req.body.user;
-		    res.render('thankyou', exportModules.config('thankyou', req.session.userName));
+		    res.render('posts', exportModules.config('posts', req.session.userName));
 		}
 		else {
 			res.render('invalidUser');
