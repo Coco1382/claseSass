@@ -1,0 +1,15 @@
+<div class="inventory" ng-controller="addInventoryController" ng-init="user='{{user.name}}'; secret='{{user.secret}}'">
+	<div class="wrapper">
+		<div class="search-panel">
+			<form ng-submit="addItem()">
+				<label for="addName">Name</label>
+				<input type="text" id="addName" ng-model="addName"/>
+				<label for="addBrand">Brand</label>
+				<input type="text" id="addBrand" ng-model="addBrand"/>
+				<label for="addQuantity">Quantity</label>
+				<input type="text" id="addQuantity"  ng-model="addQuantity"/>
+				<input type="submit" id="submit" value="Create" />
+				</form>
+		</div>
+	</div>
+</div> 

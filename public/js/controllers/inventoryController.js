@@ -12,6 +12,12 @@ APP.controller('inventoryController', function($scope, $firebaseArray) {
 			}
 		});
 
+		$scope.remove = function(id){
+			var fb = new Firebase("https://sizzling-heat-7126.firebaseio.com/"+$scope.user+"/"+id);
+			fb.remove();
+
+		};
+
    	});
 
 

@@ -11,6 +11,7 @@
 					<th class="table-data__th">Name</th>
 					<th class="table-data__th">Brand</th>
 					<th class="table-data__th">Quantity</th>
+					<th class="table-data__th">Delete</th>
 				</tr>
 			</thead>
 			<tbody class="table-data__tbody">
@@ -23,6 +24,9 @@
 					</td>
 					<td class="table-data__td">
 						<[x.quantity]>
+					</td>
+					<td class="table-data__td">
+						<input type="button" value= "delete" ng-click="remove(x.$id)">
 					</td>
 				</tr>
 			</tbody>
