@@ -16,21 +16,17 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 
 				} else {
 
-					//var list = $firebaseArray(ref);
-					//$scope.posts = list;
+					//Elimina los items
 
 					$scope.removeItem = function (index) {
-						//console.log(ref);
-						// Funciona pero hay que hacer un objeto nuevo de Firebase
-						//var itemRef = new Firebase(url + '/' + id);
-						//itemRef.remove();
 
-						//obj.$remove(id); <-- remueve todos los datos UPSSS
 						var item = list[index];
 						list.$remove(item).then(function(ref) {
 							ref.key() === item.$id; // true
 						});
 					};
+
+					//Crea los items
 
 					$scope.createItem = function () {
 						if ($scope.postTitle && $scope.postDescription && $scope.postImage ) {
@@ -43,6 +39,8 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 						}
 					};
 
+					//Edita los items
+
 					$scope.editItem = function (index) {
 						var item = list[index];
 						$scope.postIndex = index;
@@ -50,6 +48,8 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 						$scope.postDescription2 = item.newsBody;
 						$scope.postImage2 = item.img;
 					};
+
+					//Boton que salva los items
 
 					$scope.saveItem = function (index) {
 						if (index !== '') {
@@ -66,6 +66,8 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 							$('#editPost').modal('hide');
 						}
 					};
+
+					//Boton que cancela los items
 
 					$scope.cancelBtn = function () {
 						$scope.postIndex = '';
