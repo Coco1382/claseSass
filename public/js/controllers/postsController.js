@@ -49,7 +49,6 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 						$scope.postTitle2 = item.title;
 						$scope.postDescription2 = item.newsBody;
 						$scope.postImage2 = item.img;
-
 					};
 
 					$scope.saveItem = function (index) {
@@ -63,6 +62,8 @@ APP.controller('postsController', function($scope, $firebaseArray) {
 							$scope.postTitle2 = '';
 							$scope.postDescription2 = '';
 							$scope.postImage2 = '';
+
+							$('#editPost').modal('hide');
 						}
 					};
 

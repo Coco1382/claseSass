@@ -19,6 +19,10 @@ body {
 	@include respond-to($screen-lg-min){
 		max-width: $screen-lg-min;
 	}
+
+  	.resizeBanner {
+	  width: 100%;
+	}
 }
 
 .font-icon {
